@@ -1,0 +1,2 @@
+- Questo è un progetto realizzato da Dalle Crode Enrico e Dotto Filippo. Si tratta di un sito web interattivo che vi farà comprendere come la combinatoria e la probabilità coinvolgano vari rami delle scienze.
+- In particolare vedremo, attraverso un gioco l'applicazione delle matrici per il calcolo di probabilità condizionate, poi in fisica il concetto di entropia e infine in chimica il numero di enantiomeri possibili in base al numero di centri chirali.
