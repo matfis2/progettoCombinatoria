@@ -1,0 +1,592 @@
+html{
+    display: block;
+}
+body{
+    background-color: rgb(110, 109, 109);
+}
+
+#primapt{
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 200px;
+    display: none;
+}
+#secondapt{
+    display: none;
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 100px;
+}
+#zonascommessa{
+    display: none;   
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 200px;
+}
+#zonapunt{
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 100px;
+}
+.subtitle{ 
+    padding-top: 100px;
+    color: white;
+    font-size: 20px;
+    z-index: 2;  /* Posiziona il contenuto sopra l'overlay */
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+}
+h1{
+    display: inline;
+    margin-top: 30px;
+    position: relative;
+    top: 30px;
+}
+
+#rollButton{
+    position: relative;
+    left: 1100px;
+}
+
+
+#die {
+    
+    position:relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: roll 1.5s ease-in-out;
+    left: 1100px;
+    top: 100px;
+}
+
+.face {
+   
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border: 1px solid #000;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.front  { transform: rotateY(0deg) translateZ(40px); }
+.back   { transform: rotateY(180deg) translateZ(40px); }
+.left   { transform: rotateY(-90deg) translateZ(40px); }
+.right  { transform: rotateY(90deg) translateZ(40px); }
+.top    { transform: rotateX(90deg) translateZ(40px); }
+.bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+@keyframes roll {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(720deg) rotateY(720deg); }
+}
+
+
+#textresult{
+    display: inline;
+    position: relative;
+    top: 80px;
+    left: 700px;
+}
+#resultTextArea{
+    resize: none;
+    overflow: auto;
+}
+#title {
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease-in-out;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+}
+
+
+nav {
+    z-index: 1;
+    background: linear-gradient( #000000, #999491);
+    padding: 10px;
+    z-index: 2; 
+    border-radius: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+li {
+    
+    margin: 0 20px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: rgb(230, 39, 39);
+}
+
+/* Effetto sottolineatura al passaggio del mouse */
+li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgb(230, 39, 39);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+}
+.image-container{
+    display: inline;
+    position:relative;
+    right: 330px;
+}
+
+img {
+    width: 150px; /* Imposta la larghezza delle immagini*/
+    height: auto;
+}
+#posrana{
+    transition: transform 1s ease-in-out;
+    display: inline;
+    position: relative;
+    right:1100px;   /*posizioni iniziali, per la posizione 5: right 480px; 
+                                        per la posizione 4: right: 630px;
+                                         per la posizione 3: right: 790px; 
+                                         per la posizione 2: right: 950px 
+                                         per la posizione 1: right: 1100px */
+    bottom: 30px;
+    transition: all 1.5s ease;
+}
+/* Stile per il pulsante disattivato */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+#soldi{
+    display: inline;
+    position: relative;
+    left: 1100px;
+    top:50px;
+    width: 50px;
+    height: 50px;
+}
+#soldi2{
+
+    display: inline;
+    position: relative;
+    top: 158px;
+    right: 180px;
+    width: 32px;
+    height: 32px;
+}
+
+.popup-container {
+    display: none;
+    position: absolute;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    cursor: grab;
+}
+
+.popup-header {
+    background-color: #ff2802;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    text-align: right;
+}
+
+.popup-header .popup-close-button {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content {
+    padding: 10px;
+}
+
+/* Aggiungiamo la classe per il trascinamento */
+.draggable {
+    cursor: grab;
+}
+#apriPopup {
+    right: 70px;
+    position: relative;
+    top: 30px;
+    padding: 10px 20px;
+    background-color: #ee3d26;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#apriPopup:hover {
+    background-color: #c91e08;
+}
+#titregole{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+#importo{
+    display: inline;
+    position: relative;
+   left: 1060px; 
+   top: 36px;
+   font-weight: bold;
+   font-family: 'Raleway', sans-serif; 
+   font-size: 30px;
+}
+
+
+
+
+#scommetti{
+    background-color: #ff0000;
+    color:black;
+    padding: 30px 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    left: 240px;
+    top: 35px;
+    border: solid black 2px;
+}
+
+#scommetti:hover {
+    background-color: #fd401ed3;
+}
+
+.lampeggiante {
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.botscom{
+    position: relative;
+    display: inline;
+    color:black;
+    padding: 30px 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    left: 60px;
+    top: 35px;
+    border: solid black 2px;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    margin-left: 30px;
+
+}
+#sommascommessa{
+    display: inline;
+    position: relative;
+    top: 150px;
+    right: 190px;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    font-size: 25px;
+
+}
+#puntata1{
+
+    background-color: green;
+}
+#puntata2{
+
+    background-color: red;
+}
+#titsom{
+    display: inline;
+    position: relative;
+    top: 150px;
+    right: 190px;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    font-size: 22px;
+}
+#titpunta{
+    display: inline;
+    position: relative;
+    left: 50px;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    font-size: 22px;
+}
+#scelte{
+
+    position: relative;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    left: 600px;
+
+}
+/* Stile per le etichette delle opzioni */
+.opzioni label {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile per l'opzione selezionata */
+.opzioni input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Stile al passaggio del mouse sulle etichette delle opzioni */
+.opzioni label:hover {
+    background-color: #007bff;
+    color:white;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile per i pulsanti radio personalizzati */
+.opzioni input[type="radio"] + label::before {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: border-color 0.3s ease;
+}
+
+/* Stile al passaggio del mouse sui pulsanti radio personalizzati */
+.opzioni input[type="radio"] + label:hover::before {
+    border-color: #0056b3;
+}
+
+/* Stile per i pulsanti radio selezionati */
+.opzioni input[type="radio"]:checked + label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Stile per il bottone "Avvia Partita" */
+.bottone-avvia {
+    display: inline-block;
+    position: relative;
+    left: 800px;
+    top:100px;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Stile al passaggio del mouse sul bottone */
+.bottone-avvia:hover {
+    background-color: #0056b3;
+}
+.popup-errore {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 9999;
+}
+#partemat{
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    font-size: 40px;
+    padding: 20px;
+}
+#nlanci{
+    font-family: 'Raleway',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    left: 770px;
+    bottom: 80px;
+}
+#contalanci{
+    
+    font-family: 'Raleway',sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    position: relative;
+    display: inline;
+    left: 915px;
+    bottom: 107px;
+}
+#finepartita{
+    background-color: lightblue;
+    border-radius: 15px;
+    position: relative;
+    display:inline;
+    bottom: 140px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 4rem;
+    color: #e74c3c; /* Colore rosso */
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #333;
+    z-index: 9999;
+    font-family:'Raleway',sans-serif;
+    padding:50px;
+    transition: all 1.5s ease;
+    opacity: 0.7;
+}
+#riprova{
+    font-family:'Raleway',sans-serif;
+    display: none;
+    background-color: red;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    left: 400px;
+}
+
+#riprova:hover {
+    background-color:#c91e08;
+}
+.spiegazione{
+    margin: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family:'Raleway',sans-serif;
+
+}
+#defclassica{
+    position: relative;
+    left: 170px;
+    width: 700px;
+    height: 180px;
+}
+#probabilitacondizionata{
+    position: relative;
+    left: 100px;
+    width: 850px;
+    height: 160px;
+}
+#simbmatrice{
+    position: relative;
+    bottom: 50px;
+    width: 100px;
+    left: 300px;
+}
+#matricein{
+    position: relative;
+    left: 300px;
+    width: 350px;
+    height: 160px;
+}
+#matriceele{
+    position: relative;
+    left: 300px;
+    width: 360px;
+    height: 160px;
+}
+#simbmatrice2{
+    width: 100px;
+    position: relative;
+    left: 300px;
+    bottom: 50px;
+}
+#aiutomate{
+    /* Stile del pulsante */
+
+    display: none;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #f56a3f, #f59e1d); /* Sfondo con sfumatura */
+    color: #fff; /* Colore del testo */
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase; /* Testo in maiuscolo */
+    border: none;
+    border-radius: 5px; /* Bordi arrotondati */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+    left: 400px;
+    top: 130px;
+}
+/* Stile del pulsante al passaggio del mouse */
+.aiutomate:hover {
+    background: linear-gradient(to bottom, #f85931, #ff9b17); /* Cambia sfumatura al passaggio del mouse */
+    transform: scale(1.1);
+
+}

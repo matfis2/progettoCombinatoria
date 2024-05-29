@@ -1,0 +1,78 @@
+
+body {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;rgb(214, 208, 208);
+    background-color:rgb(189, 179, 179);
+    text-align: center;
+}
+
+nav {
+    z-index: 1;
+    background: linear-gradient( #000000, #999491);
+    padding: 10px;
+    z-index: 2; 
+    border-radius: 20px;
+    margin-top: 8px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+li {
+    
+    margin: 0 20px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: rgb(230, 39, 39);
+}
+
+/* Effetto sottolineatura al passaggio del mouse */
+li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgb(230, 39, 39);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+}
+#titolo{
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+}
+#cont{
+    font-family: 'Raleway', sans-serif;
+    padding: 30px;
+    margin: 80px;
+    background-color: white;
+    border-radius: 15px;
+}
+.nomi{
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}

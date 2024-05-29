@@ -1,0 +1,213 @@
+body {
+    background-color: black;
+}
+.primapt{
+    position: relative;
+    top:70px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    height: 600px;
+}
+
+nav {
+    z-index: 1;
+    background: linear-gradient( #000000, #999491);
+    padding: 10px;
+    z-index: 2; 
+    border-radius: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+li {
+    
+    margin: 0 20px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: rgb(230, 39, 39);
+}
+
+/* Effetto sottolineatura al passaggio del mouse */
+li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgb(230, 39, 39);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+}
+#subtitle{ 
+    display: inline;
+    color: white;
+    font-size: 30px;
+    z-index: 2;  /* Posiziona il contenuto sopra l'overlay */
+    font-family: 'Raleway', sans-serif;
+
+}
+
+footer{
+    padding: 40px;
+
+}
+#footer{
+    margin-bottom:50px; 
+    font-weight: bold;
+    z-index: 2;   
+    text-shadow: #131211;
+}
+#titolo {
+    margin-left: 20px;
+    margin-top: 50px;
+    z-index:1; /* Posiziona il contenuto sopra l'overlay */
+    font-family: 'Raleway', sans-serif;
+    font-size: 48px;
+    color:white;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+/* ... (il resto del tuo CSS rimane invariato) */
+
+
+/* PROVA RIGUARDO ALLA SIMULAZIONE*/
+
+
+#img_macrostati{
+    width: 500px;
+    position: relative;
+    left: 600px;
+}
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    width: 500px;
+    position: relative;
+    bottom: 400px;
+   
+}
+#descr1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    width: 500px;
+    position: relative;
+    bottom: 400px;
+    font-size: 20px;
+}
+#descr2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    width: 600px;
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    font-size: 20px;
+ 
+}
+#descr3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    bottom: 90px;
+}
+
+#secondo, #terzo{
+    margin-top: 100px;
+}
+#terzo{
+    padding-bottom: 300px;
+}
+
+h2, h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.subtitle{ 
+    padding-top: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+
+#container2 {
+    width: 504px;
+    height: 304px;
+    border: 1px solid black;
+    background-color: rgb(235, 191, 97);
+    position: relative;
+    
+}
+
+#rectangle {
+    position: absolute;
+    border: 2px solid blue;
+}
+
+#ragno{
+z-index: 1;
+    position: relative;
+    left: 20px;
+    top: 320px;
+    pointer-events: none;
+}
+
+#btProb{
+    background-color: red;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+
+    padding: 10px 20px;
+    margin: 10px;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+
+#imgprob{
+    width: 350px;
+    position: absolute;
+    left: 700px;
+    bottom: 190px;
+}
+
+
+#particles-container, #speedSlider, #speedLabel{
+    position: relative;
+    top: 60px;
+}
