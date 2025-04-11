@@ -5,7 +5,7 @@ function getRandomPosition(containerWidth, containerHeight) {
     const y = Math.random() * (containerHeight - 20);
     return { x, y };
 }
-
+kvmdfkvmdfignfdigndiofgdsfngdfniogdonigds
 function moveParticle() {
     const container = document.querySelector('.container');
     const containerWidth = container.clientWidth;
